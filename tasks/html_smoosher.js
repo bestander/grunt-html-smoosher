@@ -91,7 +91,7 @@ module.exports = function(grunt) {
         $(this).replaceWith(options.jsTags.start + processInput(grunt.file.read(filePath)) + options.jsTags.end);
       });
 
-      if(processImages){
+      if(this.options().processImages){
         $('img').each(function () {
           var src = $(this).attr('src');
           if (!src) { return; }
